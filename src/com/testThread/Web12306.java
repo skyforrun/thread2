@@ -27,9 +27,9 @@ public class Web12306 {
 class Car implements Runnable{
     int Counter = 0;
    @Override
-    public synchronized void run() {
+    public void run() {
        for (int i = 0; i < 5; i++) {
-           System.out.println(Thread.currentThread().getName()+"count:"+Counter++);
+           System.out.println(Thread.currentThread().getName()+"数到了:"+Counter++);
            try {
                Thread.sleep(100);
            } catch (InterruptedException e) {

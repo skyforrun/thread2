@@ -1,4 +1,4 @@
-package com.testThread;
+package com.testThread.proxy;
 
 /**
   *
@@ -39,7 +39,6 @@ interface Marry{
 }
 //真实角色
 class You implements Marry{
-
     @Override
     public void marry() {
         System.out.println("you结婚了");
@@ -47,9 +46,9 @@ class You implements Marry{
 }
 //代理角色
  class Vedding implements Marry{
-    private Marry you;
+    private You you;
     public Vedding(){}
-    public Vedding(Marry you){
+    public Vedding(You you){
         this.you = you;
     }
     private void before(){

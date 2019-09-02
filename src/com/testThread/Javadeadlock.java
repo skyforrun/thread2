@@ -72,8 +72,6 @@ class Test3 extends Thread{
     public void run(){
         try{
 
-
-
             lock.fun2(i);
         }catch(Exception e){
             e.printStackTrace();

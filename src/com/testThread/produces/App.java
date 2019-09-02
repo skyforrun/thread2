@@ -1,4 +1,4 @@
-package com.testThread;
+package com.testThread.produces;
 
 /**
  * @ProjectName: thread

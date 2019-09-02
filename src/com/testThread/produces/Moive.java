@@ -1,4 +1,4 @@
-package com.testThread;
+package com.testThread.produces;
 
 /**
  * @ProjectName: thread
@@ -21,6 +21,10 @@ public class Moive {
     //flag-->false, 消费者消费，生产者休眠，消费完成后通知生产
     private boolean flag = true;//信号灯
 
+    /**
+     * 生产
+     * @param pic
+     */
     public synchronized void play(String pic){
         if (flag==false){//生产者等待
             try {
@@ -44,6 +48,9 @@ public class Moive {
         this.flag = false;
     }
 
+    /**
+     * 消费
+     */
     public synchronized void watch(){
         if (flag){//消费者等待
             try {
